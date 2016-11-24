@@ -8,7 +8,7 @@ public:
     Base() { cout << "+ Собрать объект Base\n"; }
     ~Base() { cout << "+ Разобрать объект Base\n"; }
 
-    void func() const { cout << "+ Функция func() класса Base\n"; }
+    virtual void func() const { cout << "+ Функция func() класса Base\n"; }
 };
 
 class Child: public Base
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     cout << "+ Вызов метода func() для объекта Child" << endl;
     Function(child);
 
-    cout << "* Добавление процедуры с перегрузкой функции для нового объекта" << endl;
+    cout << "* Функция сделана виртуальная и перегружается для всех наследников" << endl;
 
     return 0;
 }
