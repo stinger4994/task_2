@@ -16,6 +16,8 @@ class Child: public Base
 public:
     Child() { cout << "+ Собрать объект Child\n"; }
     ~Child() { cout << "+ Разобрать объект Child\n"; }
+
+    void func() { cout << "+ Функция func() класса Child\n"; }
 };
 
 int main(int argc, char *argv[])
@@ -31,7 +33,7 @@ int main(int argc, char *argv[])
     cout << "+ Вызов метода func() для объекта Child" << endl;
     child.func();
 
-    cout << "* Добавление медота класса Base" << endl;
+    cout << "* Добавление перегрузки функции для наследуемого класса" << endl;
 
     return 0;
 }
