@@ -7,6 +7,8 @@ class Base
 public:
     Base() { cout << "+ Собрать объект Base\n"; }
     ~Base() { cout << "+ Разобрать объект Base\n"; }
+
+    void func() { cout << "+ Функция func() класса Base\n"; }
 };
 
 class Child: public Base
@@ -23,7 +25,13 @@ int main(int argc, char *argv[])
     cout << "+ Создать объект Child" << endl;
     Child child;
 
-    cout << "Создание и удаление двух объектов. Применение наследования" << endl;
+    cout << "+ Вызов метода func() для объекта Base" << endl;
+    base.func();
+
+    cout << "+ Вызов метода func() для объекта Child" << endl;
+    child.func();
+
+    cout << "* Добавление медота класса Base" << endl;
 
     return 0;
 }
