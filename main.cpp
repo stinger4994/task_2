@@ -1,13 +1,7 @@
-#include <iostream>
+#include "oop.cpp"
 #include "oop.h"
 
 using namespace std;
-
-void Function(const Base &obj)
-{
-    cout << "+ Вызов метода func() для объекта obj" << endl;
-    obj.func();
-}
 
 int main(int argc, char *argv[])
 {
