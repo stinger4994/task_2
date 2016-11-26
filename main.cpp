@@ -1,24 +1,7 @@
 #include <iostream>
+#include "oop.h"
 
 using namespace std;
-
-class Base
-{
-public:
-    Base() { cout << "+ Собрать объект Base\n"; }
-    ~Base() { cout << "+ Разобрать объект Base\n"; }
-
-    virtual void func() const { cout << "+ Функция func() класса Base\n"; }
-};
-
-class Child: public Base
-{
-public:
-    Child() { cout << "+ Собрать объект Child\n"; }
-    ~Child() { cout << "+ Разобрать объект Child\n"; }
-
-    void func() const { cout << "+ Функция func() класса Child\n"; }
-};
 
 void Function(const Base &obj)
 {
@@ -39,8 +22,6 @@ int main(int argc, char *argv[])
 
     cout << "+ Вызов метода func() для объекта Child" << endl;
     Function(child);
-
-    cout << "* Функция сделана виртуальная и перегружается для всех наследников" << endl;
 
     return 0;
 }
